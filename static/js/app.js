@@ -189,7 +189,6 @@ function updateMetadata(metadata, sampleIndex) {
 
   // Display sample metadata
   const selectedMetadata = metadata[sampleIndex];
-  console.log({ selectedMetadata });
   sampleMetadata.append("p").text(`id: ${selectedMetadata.id}`);
   sampleMetadata.append("p").text(`ethnicity
   : ${selectedMetadata.ethnicity}`);
@@ -208,7 +207,6 @@ function updateMetadata(metadata, sampleIndex) {
 function initApp() {
   loadJsonData()
     .then((data) => {
-      console.log({ data });
       createCharts(data);
     })
     .catch((error) => {
